@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.romellfudi.permission:fudi-permission-1.0.a">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fudi-permission-1.0.a.aar/802c8f87cf5a16b3a620a98fe250f25a/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fudi-permission-1.0.a.aar/802c8f87cf5a16b3a620a98fe250f25a/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.romellfudi.permission/fudi-permission/1.0.a/3230f8e1d48b611e5a4abea81f78bb3539afe96f/fudi-permission-1.0.a-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

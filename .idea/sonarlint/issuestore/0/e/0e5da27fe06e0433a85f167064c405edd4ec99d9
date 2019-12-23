@@ -1,0 +1,45 @@
+
+Qsquid:S16592".Declare "mInterstitialAd4" on a separate line.(«î°™øÿÿÿÿ8‡©•„Ş-
+usquid:S3776K"RRefactor this method to reduce its Cognitive Complexity from 64 to the 15 allowed.(¨Œşÿÿÿÿ8‡©•„Ş-
+Qsquid:S16592".Declare "mInterstitialAd2" on a separate line.(«î°™øÿÿÿÿ8‡©•„Ş-
+vsquid:S1450-"SRemove the "bill" field and declare it as a local variable in the relevant methods.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+Esquid:S1659-""Declare "bill" on a separate line.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+Hsquid:S1659-"%Declare "payment" on a separate line.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+Lsquid:S1659/")Declare "chargeLevel" on a separate line.(èä¯•ıÿÿÿÿ8‡©•„Ş-
+tsquid:S1192£"VDefine a constant instead of duplicating this literal "headingOfNumberString" 4 times.(õÔÌR8‡©•„Ş-
+{squid:S1450-"XRemove the "sendmoney" field and declare it as a local variable in the relevant methods.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+nsquid:S00100¯"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãÿì€8‡©•„Ş-
+Osquid:S1481V"1Remove this unused "mTextMessage" local variable.(¡Ü“„8‡©•„Ş-
+Msquid:S1659-"*Declare "moneyRequest" on a separate line.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+osquid:S00117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°–Ù¦ûÿÿÿÿ
+ysquid:S1450-"VRemove the "cashout" field and declare it as a local variable in the relevant methods.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+tsquid:S1450."VRemove the "balance" field and declare it as a local variable in the relevant methods.(ò¢ÄÈ8‡©•„Ş-
+ysquid:S1450-"VRemove the "payment" field and declare it as a local variable in the relevant methods.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+}squid:S1450/"ZRemove the "chargeLevel" field and declare it as a local variable in the relevant methods.(èä¯•ıÿÿÿÿ8‡©•„Ş-
+^squid:S1854V"@Remove this useless assignment to local variable "mTextMessage".(¡Ü“„8‡©•„Ş-
+Qsquid:S16592".Declare "mInterstitialAd3" on a separate line.(«î°™øÿÿÿÿ8‡©•„Ş-
+Jsquid:S1075Ù"&Remove this hard-coded path-delimiter.(¼ÆÕÖúÿÿÿÿ8‡©•„Ş-
+qsquid:S00117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ÏÈÊ8‡©•„Ş-
+Osquid:S1659-",Declare "mobileRecharge" on a separate line.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+qsquid:S00117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òŠ–ú8‡©•„Ş-
+[squid:S1905…"7Remove this unnecessary cast to "BottomNavigationView".(úÒ…×ıÿÿÿÿ8‡©•„Ş-
+lsquid:S1192Œ"MDefine a constant instead of duplicating this literal "not showing" 10 times.(¡£õÄ8‡©•„Ş-
+lsquid:S1192“"NDefine a constant instead of duplicating this literal "getOptionName" 5 times.(—ó8‡©•„Ş-
+Msquid:S5411_"*Use the primitive boolean expression here.(¿¯Ş´ıÿÿÿÿ8‡©•„Ş-
+nsquid:S00100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨—8‡©•„Ş-
+€squid:S1450-"]Remove the "mobileRecharge" field and declare it as a local variable in the relevant methods.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+\"squid:SwitchLastCaseIsDefaultCheck9""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8‡©•„Ş-
+ssquid:S00100œ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö‡ûÿÿÿÿ8‡©•„Ş-
+ squid:S1186¡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¡é††8‡©•„Ş-
+nsquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(Äîóøÿÿÿÿ8‡©•„Ş-
+nsquid:S00100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ş”Ë8‡©•„Ş-
+|squid:S1450/"YRemove the "deviceName" field and declare it as a local variable in the relevant methods.(èä¯•ıÿÿÿÿ8‡©•„Ş-
+esquid:S1126’"AReplace this if-then-else statement by a single return statement.(ç´“Ëÿÿÿÿÿ8‡©•„Ş-
+nsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãúòË8‡©•„Ş-
+Jsquid:S1659-"'Declare "sendmoney" on a separate line.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+~squid:S1450-"[Remove the "moneyRequest" field and declare it as a local variable in the relevant methods.(Ì—÷†ûÿÿÿÿ8‡©•„Ş-
+|squid:S14500"YRemove the "firstStart" field and declare it as a local variable in the relevant methods.(­ÎË½ûÿÿÿÿ8‡©•„Ş-
+ssquid:S00100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÖì³şÿÿÿÿ8‡©•„Ş-
+Qsquid:S16592".Declare "mInterstitialAd5" on a separate line.(«î°™øÿÿÿÿ8‡©•„Ş-
+ssquid:S00100§"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ñ’îøÿÿÿÿ8‡©•„Ş-
+]squid:S3398…">Move this method into the anonymous class declared at line 53.(ª¢ŸÙ8‡©•„Ş-

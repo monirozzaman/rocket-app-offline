@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.itvillage.dev.offlinebkashap.PermissionActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_arrow_back_black_24dp"
+            android:gravity="center"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/linearLayout11"
+        android:layout_below="@+id/linearLayout11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="61dp">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Hi, All feature will be running,give those permission !"
+            android:textColor="#6b6969"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:ignore="NotSibling" />
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="100dp"
+            android:layout_height="88dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/mobile"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="53dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_alignStart="@+id/textView11"
+            android:layout_marginBottom="9dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Send\nPermissions"
+            android:textColor="#000"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="67dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout7"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="61dp">
+
+        <ImageView
+            android:id="@+id/imageView55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="45dp"
+            android:background="@drawable/contact" />
+
+        <TextView
+            android:id="@+id/textView1266"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView55"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/imageView55"
+            android:text="Open Accessibility Settings" />
+
+        <Button
+            android:id="@+id/phoneCall45"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/imageView55"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_border_background"
+            android:fontFamily="sans-serif-condensed"
+            android:text="open"
+            android:textColor="#7531ae" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView1266"
+            android:layout_below="@+id/phoneCall45"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="3dp"
+            android:text="For sent calling request to execute USSD code by your order"
+            android:textColor="#bcbaba"
+            android:textSize="13dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/nextBut"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/but_gradient"
+        android:fontFamily="monospace"
+        android:text="Next"
+        android:textColor="@color/white" />
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "353518105380",
+    "firebase_url": "https://bkash-3debb.firebaseio.com",
+    "project_id": "bkash-3debb",
+    "storage_bucket": "bkash-3debb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353518105380:android:7a0977199b201551",
+        "android_client_info": {
+          "package_name": "com.itvillage.dev.offlinebkashap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353518105380-l02c9f50u33lgd2db2co6nb7njkbkqe6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itvillage.dev.offlinebkashap",
+            "certificate_hash": "6c512d5f20943946995edb885b9f6dcede230874"
+          }
+        },
+        {
+          "client_id": "353518105380-pss51sm6cmf6llhn15at4475vdcuas1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMjV40gdhVyzBgNwaOELfjpsz2sOPuXUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353518105380-pss51sm6cmf6llhn15at4475vdcuas1p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

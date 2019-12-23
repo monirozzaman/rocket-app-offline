@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'ussd-library'
+
+    publishedGroupId = 'com.romellfudi.ussdlibrary'
+    libraryName = 'VoIpUSSD'
+    artifact = 'ussd-library'
+
+    libraryDescription = 'Android library To comunicate with ussd display'
+
+    siteUrl = 'https://romellfudi.github.io/VoIpUSSDSample'
+    gitUrl = 'https://romellfudi.github.io/VoIpUSSDSample.git'
+
+    libraryVersion = '1.1.i'
+
+    developerId = 'romellfudi'
+    developerName = 'Romell Dominguez'
+    developerEmail = 'romllz489@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 20
+        targetSdkVersion 28
+        versionCode 1
+        versionName libraryVersion
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions{
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:28.+'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-all:1.10.19'
+    testImplementation 'org.powermock:powermock-module-junit4:1.6.2'
+    testImplementation 'org.powermock:powermock-api-mockito:1.6.2'
+}
+
+apply from: 'https://raw.githubusercontent.com/romellfudi/assets/master/artifactory_bintray.gradle'
+apply from: 'https://raw.githubusercontent.com/romellfudi/assets/master/artifactory_install.gradle'

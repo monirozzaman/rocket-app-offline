@@ -1,0 +1,30 @@
+
+hsquid:CommentedOutCodeLineá"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+osquid:S14501"SRemove the "send" field and declare it as a local variable in the relevant methods.(ßÜ®šûÿÿÿÿ
+Q"squid:SwitchLastCaseIsDefaultCheck¬""Add a default case to this switch.(Õ³œþ
+asquid:S3252¹"IUse static access with "com.hsalf.smilerating.BaseRating" for "TERRIBLE".(ô–³Ì
+Csquid:S16593"'Declare "counterNo" on a separate line.(»ñ±ÿÿÿÿÿ
+]squid:S3252¶"EUse static access with "com.hsalf.smilerating.BaseRating" for "OKAY".(˜•ùÚ
+Zsquid:S1854Ù"=Remove this useless assignment to local variable "simSelect".(’„³Æýÿÿÿÿ
+™squid:S1186®"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”þ¿’
+]squid:S3252°"EUse static access with "com.hsalf.smilerating.BaseRating" for "GOOD".(Ö©èÖ
+™squid:S1186Ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”þ¿’
+@squid:S16593"$Declare "amount" on a separate line.(»ñ±ÿÿÿÿÿ
+=squid:S16593"!Declare "ref" on a separate line.(»ñ±ÿÿÿÿÿ
+;squid:S16590"$Declare "getPin" on a separate line.(”Æïÿ
+dsquid:S1192®"GDefine a constant instead of duplicating this literal "smaile" 5 times.(Þò†ÿÿÿÿÿ
+csquid:CommentedOutCodeLineÜ"<This block of commented-out lines of code should be removed.( ª°Ð
+Asquid:S16590"*Declare "getcounterNo" on a separate line.(”Æïÿ
+\squid:S3252­"DUse static access with "com.hsalf.smilerating.BaseRating" for "BAD".(è ð¿
+=squid:S16593"!Declare "pin" on a separate line.(»ñ±ÿÿÿÿÿ
+lsquid:S00100•"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ³‡™øÿÿÿÿ
+Ksquid:S1481Ù".Remove this unused "simSelect" local variable.(’„³Æýÿÿÿÿ
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(®äÊ”üÿÿÿÿ
+Osquid:S1135Ì"2Complete the task associated to this TODO comment.(»ø²šüÿÿÿÿ
+csquid:CommentedOutCodeLineÚ"<This block of commented-out lines of code should be removed.( ª°Ð
+csquid:CommentedOutCodeLine›"<This block of commented-out lines of code should be removed.(±©Ì£
+=squid:S16590"&Declare "getRefNo" on a separate line.(”Æïÿ
+nsquid:S00117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹³ƒ‹øÿÿÿÿ
+™squid:S1186¼"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”þ¿’
+osquid:S14502"SRemove the "acNo" field and declare it as a local variable in the relevant methods.(²‰Ôóÿÿÿÿÿ
+^squid:S3252³"FUse static access with "com.hsalf.smilerating.BaseRating" for "GREAT".(™ÌÇÀ

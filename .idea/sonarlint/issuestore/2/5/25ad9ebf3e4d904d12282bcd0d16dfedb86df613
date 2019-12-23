@@ -1,0 +1,29 @@
+
+csquid:S3252¢"DUse static access with "com.hsalf.smilerating.BaseRating" for "BAD".(è ğ¿8í£•„Ş-
+esquid:S3252¨"FUse static access with "com.hsalf.smilerating.BaseRating" for "GREAT".(™ÌÇÀ8í£•„Ş-
+dsquid:S3252«"EUse static access with "com.hsalf.smilerating.BaseRating" for "OKAY".(˜•ùÚ8í£•„Ş-
+ squid:S1186¶"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”ş¿’8í£•„Ş-
+Tsquid:S1133É"5Do not forget to remove this deprecated code someday.(À½ï†8í£•„Ş-
+usquid:S00117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹³ƒ‹øÿÿÿÿ8í£•„Ş-
+dsquid:S3252¥"EUse static access with "com.hsalf.smilerating.BaseRating" for "GOOD".(Ö©èÖ8í£•„Ş-
+nsquid:S00100Œ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÄßĞ8í£•„Ş-
+vsquid:S14502"SRemove the "send" field and declare it as a local variable in the relevant methods.(ßÜ®šûÿÿÿÿ8í£•„Ş-
+Vsquid:S1135À"2Complete the task associated to this TODO comment.(»ø²šüÿÿÿÿ8í£•„Ş-
+asquid:S1854Í"=Remove this useless assignment to local variable "simSelect".(’„³Æıÿÿÿÿ8í£•„Ş-
+Dsquid:S16594"!Declare "pin" on a separate line.(è¸Ñ ıÿÿÿÿ8í£•„Ş-
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(±©Ì£8í£•„Ş-
+Ÿsquid:S1186E"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ë­áª8í£•„Ş-
+osquid:CommentedOutCodeLineÚ"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8í£•„Ş-
+osquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(®äÊ”üÿÿÿÿ8í£•„Ş-
+Xsquid:MissingDeprecatedCheckÉ"(Add the missing @deprecated Javadoc tag.(À½ï†8í£•„Ş-
+jsquid:CommentedOutCodeLineÒ"<This block of commented-out lines of code should be removed.( ª°Ğ8í£•„Ş-
+Gsquid:S16594"$Declare "amount" on a separate line.(è¸Ñ ıÿÿÿÿ8í£•„Ş-
+ squid:S1186¥"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”ş¿’8í£•„Ş-
+ksquid:S1192£"GDefine a constant instead of duplicating this literal "smaile" 5 times.(Şò†ÿÿÿÿÿ8í£•„Ş-
+vsquid:S14503"SRemove the "acNo" field and declare it as a local variable in the relevant methods.(²‰Ôóÿÿÿÿÿ8í£•„Ş-
+X"squid:SwitchLastCaseIsDefaultCheck¡""Add a default case to this switch.(Õ³œş8í£•„Ş-
+hsquid:S3252®"IUse static access with "com.hsalf.smilerating.BaseRating" for "TERRIBLE".(ô–³Ì8í£•„Ş-
+Gsquid:S16591"$Declare "getPin" on a separate line.(ËÆëæùÿÿÿÿ8í£•„Ş-
+Rsquid:S1481Í".Remove this unused "simSelect" local variable.(’„³Æıÿÿÿÿ8í£•„Ş-
+jsquid:CommentedOutCodeLineÄ"<This block of commented-out lines of code should be removed.( ª°Ğ8í£•„Ş-
+jsquid:CommentedOutCodeLineÔ"<This block of commented-out lines of code should be removed.( ª°Ğ8í£•„Ş-

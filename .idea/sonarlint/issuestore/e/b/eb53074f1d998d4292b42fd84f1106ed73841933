@@ -1,0 +1,20 @@
+
+dsquid:S1192‘"GDefine a constant instead of duplicating this literal "smaile" 5 times.(Şò†ÿÿÿÿÿ
+nsquid:S00117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹³ƒ‹øÿÿÿÿ
+squid:S14503"cRemove the "sendButtonForBalance" field and declare it as a local variable in the relevant methods.(€€§Óÿÿÿÿÿ
+lsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ÖÏ…ùÿÿÿÿ
+Q"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(Õ³œş
+\squid:S3252"DUse static access with "com.hsalf.smilerating.BaseRating" for "BAD".(è ğ¿
+]squid:S3252“"EUse static access with "com.hsalf.smilerating.BaseRating" for "GOOD".(Ö©èÖ
+^squid:S3252–"FUse static access with "com.hsalf.smilerating.BaseRating" for "GREAT".(™ÌÇÀ
+]squid:S3252™"EUse static access with "com.hsalf.smilerating.BaseRating" for "OKAY".(˜•ùÚ
+asquid:S3252œ"IUse static access with "com.hsalf.smilerating.BaseRating" for "TERRIBLE".(ô–³Ì
+Jsquid:S1135­"2Complete the task associated to this TODO comment.(êÇá
+Msquid:S1133¶"5Do not forget to remove this deprecated code someday.(À½ï†
+Qsquid:MissingDeprecatedCheck¶"(Add the missing @deprecated Javadoc tag.(À½ï†
+Zsquid:S1854º"=Remove this useless assignment to local variable "simSelect".(’„³Æıÿÿÿÿ
+Ksquid:S1481º".Remove this unused "simSelect" local variable.(’„³Æıÿÿÿÿ
+asquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(ÓğÂ>
+csquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(±©Ì£
+csquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(ÁÖû
+hsquid:CommentedOutCodeLineÈ"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ

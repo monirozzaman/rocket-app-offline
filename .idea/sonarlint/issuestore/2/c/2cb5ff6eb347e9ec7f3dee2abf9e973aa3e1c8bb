@@ -1,0 +1,25 @@
+
+|squid:S3981ó"XThe size of "cashOutRecentNumber" is always ">=0", so update this test to use isEmpty().(½¹†™úÿÿÿÿ8ˆ±•„Ş-
+]squid:S1155ï">Use isEmpty() to check whether the collection is empty or not.(â²´°8ˆ±•„Ş-
+|squid:S00116/"]Rename this field "READ_CONTACTS_CODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÃÈ•8ˆ±•„Ş-
+isquid:CommentedOutCodeLine)"<This block of commented-out lines of code should be removed.(É¨»8ˆ±•„Ş-
+9squid:S3626^"Remove this redundant jump.(ûÁİ…8ˆ±•„Ş-
+isquid:CommentedOutCodeLine;"<This block of commented-out lines of code should be removed.(„±ğë8ˆ±•„Ş-
+squid:S14500"^Remove the "headingOfNumber" field and declare it as a local variable in the relevant methods.(Í§éÓùÿÿÿÿ8ˆ±•„Ş-
+‡squid:S1450."dRemove the "headingOfNumberString" field and declare it as a local variable in the relevant methods.(âü‡şÿÿÿÿ8ˆ±•„Ş-
+usquid:S37765"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¨Œşÿÿÿÿ8ˆ±•„Ş-
+ squid:S1186­"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ˆ±•„Ş-
+qsquid:S1450*"SRemove the "next" field and declare it as a local variable in the relevant methods.(ÈŠİ€8ˆ±•„Ş-
+]squid:S1155">Use isEmpty() to check whether the collection is empty or not.(Ø¸ã•8Ñ¼ĞƒŞ-
+Isquid:S00108Ç")Either remove or fill this block of code.(¬¬Û8Ñ¼ĞƒŞ-
+¥squid:S1186²"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ê¥¾àûÿÿÿÿ8ˆ±•„Ş-
+lsquid:S1871š"MThis branch's code block is the same as the block for the branch on line 132.(ıÆ«8áÂ¤ÅŞ-
+esquid:S1126À"AReplace this if-then-else statement by a single return statement.(™‚§íøÿÿÿÿ8Ñ¼ĞƒŞ-
+Dsquid:S16592"&Declare "sugg3But" on a separate line.(ôÓüğ8ˆ±•„Ş-
+ssquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º“ã›øÿÿÿÿ8Ñ¼ĞƒŞ-
+Dsquid:S16592"&Declare "sugg2But" on a separate line.(ôÓüğ8ˆ±•„Ş-
+Isquid:S1659."&Declare "acNumber" on a separate line.(âü‡şÿÿÿÿ8ˆ±•„Ş-
+Vsquid:S1659."3Declare "headingOfNumberString" on a separate line.(âü‡şÿÿÿÿ8ˆ±•„Ş-
+nsquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(Ñ ğğùÿÿÿÿ8ˆ±•„Ş-
+Isquid:S00108÷")Either remove or fill this block of code.(å¥‡8ˆ±•„Ş-
+qsquid:S1192C"NDefine a constant instead of duplicating this literal "getOptionName" 5 times.(¬ú”Òûÿÿÿÿ8ˆ±•„Ş-
