@@ -3,7 +3,6 @@ package com.itvillage.dev.offlinebkashap;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
@@ -17,7 +16,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -41,19 +39,17 @@ public class SplashScreenHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         final List<ScreenItems> mList = new ArrayList<>();
-        mList.add(new ScreenItems("অফলাইন বিকাশ আ্যপ কি ?",
-                "বিকাশে লেনদেন হবে এখন অফলাইন আ্যপের মাধ্যমে কোন ইন্টারনেট খরচ ছাড়াই,আরো সহজে।", R.drawable.logofinal));
+        mList.add(new ScreenItems("অফলাইন রকেট আ্যপ কি ?",
+                "রকেট লেনদেন হবে এখন অফলাইন আ্যপের মাধ্যমে কোন ইন্টারনেট খরচ ছাড়াই,আরো সহজে।", R.drawable.logofinal));
 
         mList.add(new ScreenItems("সেন্ডমানি করুন",
                 "আপনার পার্সনাল একাউন্ট থেকে পার্সনাল একাউন্টে সেন্ড মানি করুন আকর্ষণীয় আ্যপ ডিজাইনে খুব সহজে যেকোন সময়।", R.drawable.sentmoneyt));
         mList.add(new ScreenItems("ক্যাশআউট করুন",
-                "নাম্বার ভুল হবার আর কোনো সম্ভবনাই নেই! বিকাশ আউটলেটে যান,ফোনবুকে সেভ করা এজেন্ট নাম্বারটি সিলেক্ট করুন,বুঝে নিন আপনার টাকা।", R.drawable.cashout));
-        mList.add(new ScreenItems("বিকাশ ক্যালকুলেটর কি ?",
-                "কত টাকা বিকাশে খরচ এটা নিয়ে চিন্তিত!! \"বিকাশ আ্যপ আপনাকে বলে দিবে আপনার খরচ তাও আবার এক ক্লিকে। ", R.drawable.calculator));
+                "নাম্বার ভুল হবার আর কোনো সম্ভবনাই নেই! রকেট আউটলেটে যান,ফোনবুকে সেভ করা এজেন্ট নাম্বারটি সিলেক্ট করুন,বুঝে নিন আপনার টাকা।", R.drawable.cashout));
         mList.add(new ScreenItems("বিকাশ মোবাইল রির্চাজ করুন",
                 "ঘরে বসেই করুন মোবাইল রির্চাজ,নাম্বার সিলেক্ট করুন আপনার ফোনবুক থেকেই।", R.drawable.mobilerecharge));
-        mList.add(new ScreenItems("বিকাশে মাধ্যমে পেমেন্ট করুন",
-                "পেমেন্ট সেবার মাধ্যমে, বিকাশ গ্রহণ করে এমন যেকোন মার্চেন্টকে আপনি পেমেন্ট করতে পারেন আপনার বিকাশ একাউন্ট থেকে। এখন আপনি দেশজুড়ে ৪৭,০০০-এর বেশি দোকানে কেনাকাটার পেমেন্ট বিকাশ করতে পারবেন।", R.drawable.paymentlogo));
+        mList.add(new ScreenItems("রকেটে মাধ্যমে পেমেন্ট করুন",
+                "পেমেন্ট সেবার মাধ্যমে, রকেট গ্রহণ করে এমন যেকোন মার্চেন্টকে আপনি পেমেন্ট করতে পারেন আপনার রকেট একাউন্ট থেকে।", R.drawable.paymentlogo));
 
         screenPager = findViewById(R.id.pageView);
         getStart = findViewById(R.id.getStart);
@@ -120,17 +116,17 @@ public class SplashScreenHomeActivity extends AppCompatActivity {
         final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setCancelable(false);
 
-        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.basic_tutorial_promo;
-        Uri uri = Uri.parse(videoPath);
+        //String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.basic_tutorial_promo;
+        // Uri uri = Uri.parse(videoPath);
 
         Button skipbut = view.findViewById(R.id.getstart);
         VideoView videoView = view.findViewById(R.id.showDemo);
         TextView instrction = view.findViewById(R.id.instraction);
 
-        videoView.setVideoURI(uri);
-        MediaController mediaController = new MediaController(this);
-        videoView.setMediaController(mediaController);
-        videoView.start();
+        // videoView.setVideoURI(uri);
+        // MediaController mediaController = new MediaController(this);
+        // videoView.setMediaController(mediaController);
+        // videoView.start();
 
         instrction.setTypeface(typeface);
         instrction.setText("টিউটোরিয়াল ক্লিপ");

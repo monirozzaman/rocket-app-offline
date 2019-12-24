@@ -58,9 +58,9 @@ public class HomeActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                     return true;
-                case R.id.menu:
-                    calculatorBottomSheetShow();
-                    return true;
+//                case R.id.menu:
+//                   // calculatorBottomSheetShow();
+//                    return true;
                 case R.id.help:
                     settingBottomSheetShow();
 
@@ -80,12 +80,12 @@ public class HomeActivity extends AppCompatActivity {
         sendmoney = findViewById(R.id.sandMoney);
         payment = findViewById(R.id.makePayment);
         mobileRecharge = findViewById(R.id.mobileRecharge);
-        bill = findViewById(R.id.payBill);
-        moneyRequest = findViewById(R.id.moneyRequst);
+        //  bill = findViewById(R.id.payBill);
+        // moneyRequest = findViewById(R.id.moneyRequst);
 
         TextView mTextMessage = (TextView) findViewById(R.id.message);
-        deviceName = (TextView) findViewById(R.id.name);
-        chargeLevel = (TextView) findViewById(R.id.acNo);
+        // deviceName = (TextView) findViewById(R.id.name);
+        // chargeLevel = (TextView) findViewById(R.id.acNo);
 
         balance = (Button) findViewById(R.id.balance);
 
@@ -126,9 +126,9 @@ public class HomeActivity extends AppCompatActivity {
         mInterstitialAd5.setAdUnitId("ca-app-pub-5203976193543346/2953664966");
         mInterstitialAd5.loadAd(new AdRequest.Builder().build());
 
-        deviceName.setText(getDeviceName());
+        //  deviceName.setText(getDeviceName());
 
-        chargeLevel.setText("Charge " + getBatteryCrgLevel() + "%");
+        //chargeLevel.setText("Charge " + getBatteryCrgLevel() + "%");
 
         cashout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -205,7 +205,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        bill.setOnClickListener(new View.OnClickListener() {
+       /* bill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!permissionAlreadyGranted()) {
@@ -214,9 +214,9 @@ public class HomeActivity extends AppCompatActivity {
                     Bill();
                 }
             }
-        });
+        });*/
 
-        moneyRequest.setOnClickListener(new View.OnClickListener() {
+   /*     moneyRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!permissionAlreadyGranted()) {
@@ -235,7 +235,7 @@ public class HomeActivity extends AppCompatActivity {
                     MoneyRequest();
                 }
             }
-        });
+        });*/
 
         balance.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -401,7 +401,7 @@ public class HomeActivity extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, AboutActivity.class));
+                //  startActivity(new Intent(HomeActivity.this, AboutActivity.class));
             }
         });
         video_tutorial.setOnClickListener(new View.OnClickListener() {

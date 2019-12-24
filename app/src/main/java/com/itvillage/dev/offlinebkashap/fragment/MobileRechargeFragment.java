@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,7 +16,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -40,18 +38,14 @@ import java.util.HashSet;
 
 import static android.content.Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS;
 
-/**
- * Created by monirozzamanroni on 7/14/2019.
- */
 
 @SuppressLint("ValidFragment")
 public class MobileRechargeFragment extends Fragment {
 
     private EditText getAmounts, getPin;
-    private Button prepaid, postpaid;
     private ImageButton send;
     private TextView acNo;
-    private String acNumber, amount, pin, simType, preOrPost = "";
+    private String acNumber, amount, pin, simType;
 
     private HashMap<String, HashSet<String>> map;
     private USSDApi ussdApi;
@@ -68,7 +62,7 @@ public class MobileRechargeFragment extends Fragment {
         }
         @Override
         public void onFinally() {
-            // pass
+
         }
     };
 
@@ -102,8 +96,6 @@ public class MobileRechargeFragment extends Fragment {
         getPin = view.findViewById(R.id.passwordSimRecharge);
 
         //Button
-        prepaid = view.findViewById(R.id.prepaidSimRecharge);
-        postpaid = view.findViewById(R.id.postpaidSimRecharge);
         send = view.findViewById(R.id.sandSimRecharge);
 
         //Text View
@@ -123,22 +115,6 @@ public class MobileRechargeFragment extends Fragment {
             simIcon.setBackgroundResource(R.drawable.teletalk);
         }
 
-        prepaid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                preOrPost = "1";
-                prepaid.setBackgroundColor(Color.parseColor("#6c9f47"));
-                postpaid.setBackgroundColor(Color.parseColor("#cf1f65"));
-            }
-        });
-        postpaid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                postpaid.setBackgroundColor(Color.parseColor("#6c9f47"));
-                prepaid.setBackgroundColor(Color.parseColor("#cf1f65"));
-                preOrPost = "2";
-            }
-        });
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,10 +123,6 @@ public class MobileRechargeFragment extends Fragment {
                 if (getAmounts.getText().toString().equals("")  && getPin.getText().toString().equals("")) {
                     getAmounts.setError("Amount is Required");
                     getPin.setError("PIN is Required");
-                }else if(preOrPost.toString().equals("")) {
-                    postpaid.setBackgroundColor(Color.parseColor("#ff0d11"));
-                    prepaid.setBackgroundColor(Color.parseColor("#ff0d11"));
-                    Toast.makeText(getContext(), "Select SIM Card Type", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     if (getAmounts.getText().toString().matches("\\d+") && getPin.getText().toString().matches("\\d+")) {
@@ -159,10 +131,11 @@ public class MobileRechargeFragment extends Fragment {
                         amount = getAmounts.getText().toString();
 
                         pin = getPin.getText().toString();
+                        inputValue.add("3");
+                        inputValue.add("1");
                         inputValue.add("2");
-                        inputValue.add(simType);
-                        inputValue.add(preOrPost);
                         inputValue.add(acNumber);
+                        inputValue.add(simType);
                         inputValue.add(amount);
                         inputValue.add(pin);
 
@@ -188,17 +161,16 @@ public class MobileRechargeFragment extends Fragment {
         ussdApi = USSDController.getInstance(getActivity(), simslot);
 
         //  if (USSDController.verifyOverLay(getActivity())) {
-
         //final Intent[] svc = {new Intent(getActivity(), SplashLoadingService.class)};
         //getActivity().startService(svc[0]);
             Log.d("APP", "START SPLASH DIALOG");
-            String phoneNumber = "*247#";
+        String phoneNumber = "*322#";
 
             ussdApi.callUSSDOverlayInvoke(phoneNumber, map, new USSDController.CallbackInvoke() {
                 @Override
                 public void responseInvoke(String message) {
                               /*  Feed Back Mag*/
-                    if (count <= 2) {
+                    if (count <= 3) {
                         if (count == 0) {
                             ussdApi.send(inputValue.get(0), new USSDController.CallbackMessage() {
                                 @Override
@@ -240,6 +212,15 @@ public class MobileRechargeFragment extends Fragment {
                                 }
                             });
                         }
+                        if (count == 3) {
+                            ussdApi.send(inputValue.get(6), new USSDController.CallbackMessage() {
+                                @Override
+                                public void responseMessage(String message) {
+                                    ++count;
+
+                                }
+                            });
+                        }
                     }
                 }
 
@@ -268,7 +249,7 @@ public class MobileRechargeFragment extends Fragment {
 
         if (mgs.equals(" ")) {
             AlertDialog alertDialog = new AlertDialog.Builder(context).create();
-            alertDialog.setTitle("Dear Sir,");
+            alertDialog.setTitle("Dear Customer,");
             alertDialog.setCancelable(false);
             alertDialog.setMessage("The bKash Account No is invalid");
             alertDialog.setIcon(R.drawable.logofinal);

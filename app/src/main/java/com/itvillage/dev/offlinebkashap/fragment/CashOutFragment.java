@@ -120,7 +120,7 @@ public class CashOutFragment extends Fragment {
                         inputValue = new ArrayList<>();
                         amount = getAmounts.getText().toString();
                         pin = getPin.getText().toString();
-                        inputValue.add("4");
+                        inputValue.add("7");
                         inputValue.add("1");
                         inputValue.add(acNumber);
                         inputValue.add(amount);
@@ -145,7 +145,7 @@ public class CashOutFragment extends Fragment {
         //  final Intent[] svc = {new Intent(getActivity(), SplashLoadingService.class)};
         //  getActivity().startService(svc[0]);
             Log.d("APP", "START SPLASH DIALOG");
-            String phoneNumber = "*247#";
+        String phoneNumber = "*322#";
 
             ussdApi.callUSSDOverlayInvoke(phoneNumber, map, new USSDController.CallbackInvoke() {
                 @Override
@@ -227,7 +227,7 @@ public class CashOutFragment extends Fragment {
 
         if (mgs.equals(" ")) {
             AlertDialog alertDialog = new AlertDialog.Builder(context).create();
-            alertDialog.setTitle("Dear Sir,");
+            alertDialog.setTitle("Dear Customer,");
             alertDialog.setCancelable(false);
             alertDialog.setMessage("The bKash Account No is invalid");
             alertDialog.setIcon(R.drawable.logofinal);

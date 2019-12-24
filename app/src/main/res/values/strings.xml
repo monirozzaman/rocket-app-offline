@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Offline Bkash App</string>
-    <string name="title_activity_home">Offline Bkash App</string>
+    <string name="app_name">Offline Rocket App</string>
+    <string name="title_activity_home">Offline Rocket App</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -9,7 +9,7 @@
     <string name="copywrite">Copyright \u00a9 IT Village Ltd</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="ask_user">আমি অ্যাপটি use করতে চাই</string>
-    <string name="privacy_text">\'অফলাইন বিকাশ অ্যাপ\' আপনার কোন পারসোনাল ডাটা অথবা পিন নাম্বার অথবা  কোন কিছুই সংরক্ষণ করে না,এই অ্যাপে কোন রকম স্টোরেজ ব্যবহার করা হয়নি।এই অ্যাপটি শুধুমাত্র USSD code  ডায়ালের মাধ্যমে আপনার কাংখিত ফলাফল এনে দেয়।
+    <string name="privacy_text">\'অফলাইন রকেট অ্যাপ\' আপনার কোন পারসোনাল ডাটা অথবা পিন নাম্বার অথবা  কোন কিছুই সংরক্ষণ করে না,এই অ্যাপে কোন রকম স্টোরেজ ব্যবহার করা হয়নি।এই অ্যাপটি শুধুমাত্র USSD code  ডায়ালের মাধ্যমে আপনার কাংখিত ফলাফল এনে দেয়।
 তাই সিকিউরিটি নিয়ে ভাবনার কোন কারনই নেই।</string>
     <string name="about_description">IT Village Ltd. \n bKash App off create by it village ltd.this app goals is to make our daily life more easy and simplify.this
 app is totally offline that is main feature  of this app.\n Any kind of use or modification without permission of It village ltd is prohibited.\n\n Like Us \n Please donate your 30 secound to like and share about on social media.</string>

@@ -2,12 +2,12 @@
 <resources>
     <color name="colorPrimary">#bb7af1</color>
     <color name="colorPrimaryDark">#7531ae</color>
-    <color name="colorAccent">#b05af8</color>
+    <color name="colorAccent">#a438fd</color>
     <color name="colorAccentsimple">#7a00e1</color>
     <!--Color for Button-->
     <color name="gradient_start_color">#4c84ff</color>
     <color name="gradient_end_color">#18a3fe</color>
-
+    <color name="simpleColorPrimaryTransparent">#40bb7af1</color>
 
     <!--tab color-->
     <color name="tab_indector_gray">#c0c0c0</color>

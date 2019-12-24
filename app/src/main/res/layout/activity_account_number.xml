@@ -50,7 +50,6 @@
                     android:layout_marginTop="8dp"
                     android:background="#fff"
                     android:drawableLeft="@drawable/phone_icon"
-                    android:drawableTint="@color/colorAccent"
                     android:ems="10"
                     android:fontFamily="sans-serif-condensed"
                     android:hint="Enter number or name"

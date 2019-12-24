@@ -45,10 +45,10 @@ import static android.content.Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS;
 @SuppressLint("ValidFragment")
 public class PaymentFragment extends Fragment {
 
-    private EditText getAmounts, getRefNo, getPin, getcounterNo;
+    private EditText getAmounts, getRefNo, getPin;
     private ImageButton send;
     private TextView acNo;
-    private String acNumber, amount, ref, pin, counterNo;
+    private String acNumber, amount, ref, pin;
 
     private HashMap<String, HashSet<String>> map;
     private USSDApi ussdApi;
@@ -94,7 +94,7 @@ public class PaymentFragment extends Fragment {
         View view = inflater.inflate(R.layout.payment_fragment, container, false);
 
         getAmounts = view.findViewById(R.id.amountsPayment);
-        getcounterNo = view.findViewById(R.id.counterNoPayment);
+
         getRefNo = view.findViewById(R.id.refNoPayment);
         getPin = view.findViewById(R.id.passwordPayment);
         getAmounts = view.findViewById(R.id.amountsPayment);
@@ -110,7 +110,6 @@ public class PaymentFragment extends Fragment {
 
                 if (getAmounts.getText().toString().equals("")
                         && getRefNo.getText().toString().equals("")
-                        && getcounterNo.getText().toString().equals("")
                         && getPin.getText().toString().equals("")) {
 
                     getAmounts.setError("Amount is Required");
@@ -119,19 +118,16 @@ public class PaymentFragment extends Fragment {
                 } else {
                     if (getAmounts.getText().toString().matches("\\d+")
                             && getRefNo.getText().toString().matches("\\d+")
-                            && getcounterNo.getText().toString().matches("\\d+")
                             && getPin.getText().toString().matches("\\d+")) {
 
                         inputValue = new ArrayList<>();
                         amount = getAmounts.getText().toString();
                         ref = getRefNo.getText().toString();
                         pin = getPin.getText().toString();
-                        counterNo = getcounterNo.getText().toString();
-                        inputValue.add("3");
+                        inputValue.add("8");
                         inputValue.add(acNumber);
-                        inputValue.add(amount);
                         inputValue.add(ref);
-                        inputValue.add(counterNo);
+                        inputValue.add(amount);
                         inputValue.add(pin);
                         closeKeyBoard();
                         Payment(0);
@@ -157,7 +153,7 @@ public class PaymentFragment extends Fragment {
         //final Intent[] svc = {new Intent(getActivity(), SplashLoadingService.class)};
         // getActivity().startService(svc[0]);
             Log.d("APP", "START SPLASH DIALOG");
-            String phoneNumber = "*247#";
+        String phoneNumber = "*322#";
 
             ussdApi.callUSSDOverlayInvoke(phoneNumber, map, new USSDController.CallbackInvoke() {
                 @Override
@@ -197,11 +193,7 @@ public class PaymentFragment extends Fragment {
                                 @Override
                                 public void responseMessage(String message) {
                                     ++count;
-                                    ussdApi.send(inputValue.get(5), new USSDController.CallbackMessage() {
-                                        @Override
-                                        public void responseMessage(String message) {
-                                        }
-                                    });
+
                                 }
                             });
 
@@ -252,7 +244,7 @@ public class PaymentFragment extends Fragment {
         } else {
 
             AlertDialog alertDialog = new AlertDialog.Builder(context).create();
-            alertDialog.setTitle("Dear Sir,");
+            alertDialog.setTitle("Dear Customer,");
             alertDialog.setCancelable(false);
             alertDialog.setMessage(mgs);
             alertDialog.setIcon(R.drawable.logofinal);

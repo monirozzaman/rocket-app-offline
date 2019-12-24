@@ -46,10 +46,10 @@ import static android.content.Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS;
 public class SendMoneyFragment extends Fragment {
 
 
-    private EditText getAmounts, getRefNo, getPin;
+    private EditText getAmounts, getPin;
     private ImageButton send;
     private TextView acNo;
-    private String acNumber, amount, ref, pin;
+    private String acNumber, amount, pin;
 
     private HashMap<String, HashSet<String>> map;
     private USSDApi ussdApi;
@@ -96,7 +96,6 @@ public class SendMoneyFragment extends Fragment {
         View view = inflater.inflate(R.layout.content_op1, container, false);
 
         getAmounts = view.findViewById(R.id.amountsSendMoney);
-        getRefNo = view.findViewById(R.id.refNoSendMoney);
         getPin = view.findViewById(R.id.passwordSendMoney);
         send = view.findViewById(R.id.sendSendMoney);
         acNo = view.findViewById(R.id.numberSendMoney);
@@ -107,26 +106,24 @@ public class SendMoneyFragment extends Fragment {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (getAmounts.getText().toString().equals("") && getRefNo.getText().toString().equals("") && getPin.getText().toString().equals("")) {
+                if (getAmounts.getText().toString().equals("") && getPin.getText().toString().equals("")) {
                     getAmounts.setError("Amount is Required");
-                    getRefNo.setError("Ref is Required");
+
                     getPin.setError("PIN is Required");
                 } else {
-                    if (getAmounts.getText().toString().matches("\\d+") && getRefNo.getText().toString().matches("\\d+") && getPin.getText().toString().matches("\\d+")) {
+                    if (getAmounts.getText().toString().matches("\\d+") && getPin.getText().toString().matches("\\d+")) {
                         inputValue = new ArrayList<>();
                         amount = getAmounts.getText().toString();
-                        ref = getRefNo.getText().toString();
+
                         pin = getPin.getText().toString();
-                        inputValue.add("1");
+                        inputValue.add("2");
                         inputValue.add(acNumber);
                         inputValue.add(amount);
-                        inputValue.add(ref);
                         inputValue.add(pin);
                         closeKeyBoard();
                         SendMoney(0);
                     } else {
                         getAmounts.setError("Invalid Amount");
-                        getRefNo.setError("Invalid Ref");
                         getPin.setError("Invalid PIN");
                     }
                 }
@@ -143,13 +140,13 @@ public class SendMoneyFragment extends Fragment {
         //  if (USSDController.verifyOverLay(getActivity())) {
 
             Log.d("APP", "START SPLASH DIALOG");
-            String phoneNumber = "*247#";
+        String phoneNumber = "*322#";
 
             ussdApi.callUSSDOverlayInvoke(phoneNumber, map, new USSDController.CallbackInvoke() {
                 @Override
                 public void responseInvoke(String message) {
                               /*  Feed Back Mag*/
-                    if (count <= 2) {
+                    if (count <= 1) {
                         if (count == 0) {
                             ussdApi.send(inputValue.get(0), new USSDController.CallbackMessage() {
                                 @Override
@@ -177,15 +174,7 @@ public class SendMoneyFragment extends Fragment {
                                 }
                             });
                         }
-                        if (count == 2) {
-                            ussdApi.send(inputValue.get(4), new USSDController.CallbackMessage() {
-                                @Override
-                                public void responseMessage(String message) {
-                                    ++count;
 
-                                }
-                            });
-                        }
                     }
                 }
 
@@ -230,7 +219,7 @@ public class SendMoneyFragment extends Fragment {
 
             AlertDialog alertDialog = new AlertDialog.Builder(context).create();
 
-            alertDialog.setTitle("Dear Sir,");
+            alertDialog.setTitle("Dear Customer,");
             alertDialog.setCancelable(false);
             alertDialog.setMessage(mgs);
             alertDialog.setIcon(R.drawable.logofinal);

@@ -121,7 +121,7 @@ public class BalanceShowFragment extends Fragment {
                         inputValue = new ArrayList<>();
 
                         pin = passwordForBalance.getText().toString();
-                        inputValue.add("7");
+                        inputValue.add("5");
                         inputValue.add("1");
                         inputValue.add(pin);
                         closeKeyBoard();
@@ -148,7 +148,7 @@ public class BalanceShowFragment extends Fragment {
             final Intent[] svc = {new Intent(getActivity(), SplashLoadingService.class)};
         // getActivity().startService(svc[0]);
             Log.d("APP", "START SPLASH DIALOG");
-            String phoneNumber = "*247#";
+        String phoneNumber = "*322#";
 
             ussdApi.callUSSDOverlayInvoke(phoneNumber, map, new USSDController.CallbackInvoke() {
                 @Override
@@ -178,6 +178,7 @@ public class BalanceShowFragment extends Fragment {
                                 public void responseMessage(String message) {
                                     ++count;
                                     getActivity().stopService(svc[0]);
+                                    Log.e("mgs1", String.valueOf(message));
                                 }
                             });
                         }
@@ -189,6 +190,7 @@ public class BalanceShowFragment extends Fragment {
                     Log.e("APP", message);
                     if (!String.valueOf(message).equals("Check your accessibility | overlay permission")) {
                         showDailog(String.valueOf(message));
+                        Log.e("mgs2", String.valueOf(message));
                         getActivity().stopService(svc[0]);
                     } else {
                         getActivity().stopService(svc[0]);
@@ -209,7 +211,7 @@ public class BalanceShowFragment extends Fragment {
         if (mgs.equals(" ")) {
 
             AlertDialog alertDialog = new AlertDialog.Builder(context).create();
-            alertDialog.setTitle("Dear Sir,");
+            alertDialog.setTitle("Dear Customer,");
             alertDialog.setCancelable(false);
             alertDialog.setMessage("The bKash Account No is invalid");
             alertDialog.setIcon(R.drawable.logofinal);

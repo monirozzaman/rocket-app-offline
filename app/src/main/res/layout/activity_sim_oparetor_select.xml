@@ -241,7 +241,6 @@
                         android:background="#96f49dc7" />
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/payBill"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"

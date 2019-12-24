@@ -33,20 +33,15 @@
                     android:background="@drawable/mobile" />
 
                 <TextView
-                    android:id="@+id/name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="Samsung SM-A750F"
-                    android:textColor="#fff" />
 
-                <TextView
-                    android:id="@+id/acNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="monospace"
-                    android:text="Charge 65%"
-                    android:textColor="#fff" />
+                    android:text="Offline Rocket App"
+                    android:textColor="#fff"
+                    android:textSize="10dp" />
+
+
 
                 <Button
                     android:id="@+id/balance"
@@ -56,8 +51,8 @@
                     android:background="@drawable/bg_ui_balance"
                     android:fontFamily="sans-serif-condensed"
                     android:padding="0dp"
-                    android:text="Tab To see balance"
-                    android:textColor="@color/colorAccent"
+                    android:text="Tap For Balance"
+
                     android:textSize="15dp" />
             </LinearLayout>
             <LinearLayout
@@ -75,8 +70,10 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
                         android:background="@drawable/cashout" />
 
                     <TextView
@@ -84,12 +81,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_marginTop="125dp"
-                        android:background="#f1eded"
-                        android:fontFamily="sans-serif-condensed"
+                        android:background="@drawable/cardview_drop_design"
+                        android:fontFamily="monospace"
                         android:gravity="center"
                         android:padding="2dp"
                         android:text="Cash out"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/white" />
                 </android.support.v7.widget.CardView>
 
                 <View
@@ -108,8 +105,10 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
                         android:background="@drawable/mobilerecharge" />
 
                     <TextView
@@ -117,12 +116,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_marginTop="125dp"
-                        android:background="#f1eded"
-                        android:fontFamily="sans-serif-condensed"
+                        android:background="@drawable/cardview_drop_design"
+                        android:fontFamily="monospace"
                         android:gravity="center"
                         android:padding="2dp"
                         android:text="Mobile Recharge"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/white" />
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
@@ -148,8 +147,10 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="125dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
                         android:background="@drawable/sentmoneyt" />
 
                     <TextView
@@ -157,12 +158,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_marginTop="125dp"
-                        android:background="#f1eded"
-                        android:fontFamily="sans-serif-condensed"
+                        android:background="@drawable/cardview_drop_design"
+                        android:fontFamily="monospace"
                         android:gravity="center"
                         android:padding="2dp"
                         android:text="Send Money"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/white" />
                 </android.support.v7.widget.CardView>
 
                 <View
@@ -181,8 +182,10 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
                         android:background="@drawable/paymentlogo" />
 
                     <TextView
@@ -190,87 +193,87 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_marginTop="125dp"
-                        android:background="#f1eded"
-                        android:fontFamily="sans-serif-condensed"
+                        android:background="@drawable/cardview_drop_design"
+                        android:fontFamily="monospace"
                         android:gravity="center"
                         android:padding="2dp"
-                        android:text="Make Payment"
-                        android:textColor="@color/colorAccent" />
+                        android:text="Merchant Pay"
+                        android:textColor="@color/white" />
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_gravity="center"
-                android:background="#96b49df4" />
+            <!--     <View
+                  android:layout_width="match_parent"
+                  android:layout_height="3dp"
+                  android:layout_gravity="center"
+                  android:background="#96b49df4" />
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="45dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+           <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="45dp"
+              android:gravity="center"
+              android:orientation="horizontal">
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/moneyRequst"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:layout_weight="1">
+              <android.support.v7.widget.CardView
+                  android:id="@+id/moneyRequst"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="15dp"
+                  android:layout_weight="1">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="125dp"
-                        android:background="@drawable/comeinsoon" />
+                  <ImageView
+                      android:layout_width="match_parent"
+                      android:layout_height="125dp"
+                      android:background="@drawable/comeinsoon" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginTop="125dp"
-                        android:background="#f1eded"
-                        android:fontFamily="sans-serif-condensed"
-                        android:gravity="center"
-                        android:padding="2dp"
-                        android:text="On the way"
-                        android:textColor="@color/colorAccent" />
-                </android.support.v7.widget.CardView>
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentTop="true"
+                      android:layout_marginTop="125dp"
+                      android:background="@drawable/bg_ui_profile"
+                      android:fontFamily="sans-serif-condensed"
+                      android:gravity="center"
+                      android:padding="2dp"
+                      android:text="On the way"
+                      android:textColor="@color/colorAccent" />
+              </android.support.v7.widget.CardView>
 
-                <View
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#96b49df4" />
+              <View
+                  android:layout_width="3dp"
+                  android:layout_height="match_parent"
+                  android:layout_gravity="center"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:background="#96b49df4" />
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/payBill"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:layout_weight="1">
+              <android.support.v7.widget.CardView
+                  android:id="@+id/payBill"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="15dp"
+                  android:layout_weight="1">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="125dp"
-                        android:background="@drawable/comeinsoon" />
+                  <ImageView
+                      android:layout_width="match_parent"
+                      android:layout_height="125dp"
+                      android:background="@drawable/comeinsoon" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginTop="125dp"
-                        android:background="#f1eded"
-                        android:fontFamily="sans-serif-condensed"
-                        android:gravity="center"
-                        android:padding="2dp"
-                        android:text="On the way"
-                        android:textColor="@color/colorAccent" />
-                </android.support.v7.widget.CardView>
-            </LinearLayout>
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentTop="true"
+                      android:layout_marginTop="125dp"
+                      android:background="#f1eded"
+                      android:fontFamily="sans-serif-condensed"
+                      android:gravity="center"
+                      android:padding="2dp"
+                      android:text="On the way"
+                      android:textColor="@color/colorAccent" />
+              </android.support.v7.widget.CardView>
+          </LinearLayout>-->
         </LinearLayout>
     </ScrollView>
 

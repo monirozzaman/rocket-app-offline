@@ -119,14 +119,14 @@ public class GetPhoneNumberActivity extends AppCompatActivity {
                 if (acNumber.equals("")) {
                     numberOrName.setError("Phone Number is Required");
                 } else {
-                    if (acNumber.length() == 14) {
+                    if (acNumber.length() == 15) {
 
-                        acNumber = acNumber.substring(3, 14).replaceAll("[-.^:,]", "");
+                        acNumber = acNumber.substring(3, 15).replaceAll("[-.^:,]", "");
                     } else if (acNumber.length() == 11) {
 
                         acNumber = acNumber.replaceAll("[-.^:,]", "");
                     }
-                    if (acNumber.length() == 11) {
+                    if (acNumber.length() == 12 || acNumber.length() == 11) {
 /* -------------------------------------- Option Selection----------------------------------------*/
 
                         if (getOptionName.equals("Send Money")) {

@@ -1,199 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/about"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/bg_ui_balance"
-        android:drawableLeft="@drawable/about"
-        android:drawablePadding="5dp"
-        android:drawableTint="@color/colorAccent"
-        android:fontFamily="sans-serif-condensed"
-        android:text="About Us"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.146" />
-
-    <Button
-        android:id="@+id/video_tutorial"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/bg_ui_balance"
-        android:drawableLeft="@drawable/video_tutorial"
-        android:drawablePadding="5dp"
-        android:drawableTint="@color/colorAccent"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Video Tutorial"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/notification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/bg_ui_balance"
-        android:drawableLeft="@drawable/ic_notifications_black_24dp"
-        android:drawablePadding="5dp"
-        android:drawableTint="@color/colorAccent"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Notification"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/video_tutorial"
-        app:layout_constraintVertical_bias="0.0" />
-    <Button
-        android:id="@+id/reatUs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/bg_ui_balance"
-        android:drawableLeft="@drawable/rate"
-        android:drawablePadding="5dp"
-        android:drawableTint="@color/colorAccent"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Rate Us"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notification"
-        app:layout_constraintVertical_bias="0.0" />
-    <Button
-        android:id="@+id/Sugg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/bg_ui_balance"
-        android:drawableLeft="@drawable/suggestion"
-        android:drawablePadding="5dp"
-        android:drawableTint="@color/colorAccent"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Suggestion"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reatUs"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/report1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/bg_ui_balance"
-        android:drawableLeft="@drawable/report"
-        android:drawablePadding="5dp"
-        android:drawableTint="@color/colorAccent"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Report"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sugg"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/privecy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/bg_ui_balance"
-        android:drawableLeft="@drawable/privacy"
-        android:drawablePadding="5dp"
-        android:drawableTint="@color/colorAccent"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Privacy Policy"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/report1"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/howtouseit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/bg_ui_balance"
-        android:drawableLeft="@drawable/help"
-        android:drawablePadding="5dp"
-        android:drawableTint="@color/colorAccent"
-        android:fontFamily="sans-serif-condensed"
-        android:text="How To Use this App"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/privecy"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_height="3dp"
+        android:background="@color/simpleColorPrimaryTransparent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:text="Menu"
-        android:textColor="@color/colorAccent"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/about"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e9e9e9" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/about"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:background="@color/simpleColorPrimaryTransparent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="About"
+                android:textAllCaps="false"
+                android:textSize="25dp"
+
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e9e9e9" />
+
+            <Button
+                android:id="@+id/video_tutorial"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/simpleColorPrimaryTransparent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Tutorial"
+                android:textAllCaps="false"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e9e9e9" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/notification"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/simpleColorPrimaryTransparent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Notification"
+                android:textAllCaps="false"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e9e9e9" />
+
+            <Button
+                android:id="@+id/reatUs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/simpleColorPrimaryTransparent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Rate Us"
+                android:textAllCaps="false"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e9e9e9" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Sugg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/simpleColorPrimaryTransparent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Suggestion"
+                android:textAllCaps="false"
+                android:textSize="25dp"
+
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e9e9e9" />
+
+            <Button
+                android:id="@+id/report1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/simpleColorPrimaryTransparent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Report"
+                android:textAllCaps="false"
+                android:textSize="25dp"
+
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e9e9e9" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/privecy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/simpleColorPrimaryTransparent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Privacy"
+                android:textAllCaps="false"
+                android:textSize="25dp"
+
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e9e9e9" />
+
+            <Button
+                android:id="@+id/howtouseit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/simpleColorPrimaryTransparent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="How to use it ?"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
