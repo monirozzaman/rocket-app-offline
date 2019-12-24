@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap.adapter;
+package com.itvillage.dev.offlinerocketapp.adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.itvillage.dev.offlinebkashap.R;
-import com.itvillage.dev.offlinebkashap.model.ScreenItems;
+import com.itvillage.dev.offlinerocketapp.R;
+import com.itvillage.dev.offlinerocketapp.model.ScreenItems;
 
 import java.util.List;
 

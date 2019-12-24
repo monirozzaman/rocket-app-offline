@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap;
+package com.itvillage.dev.offlinerocketapp;
 
 import android.app.ActionBar;
 import android.content.Context;
@@ -12,11 +12,11 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
-import com.itvillage.dev.offlinebkashap.fragment.BalanceShowFragment;
-import com.itvillage.dev.offlinebkashap.fragment.CashOutFragment;
-import com.itvillage.dev.offlinebkashap.fragment.MobileRechargeFragment;
-import com.itvillage.dev.offlinebkashap.fragment.PaymentFragment;
-import com.itvillage.dev.offlinebkashap.fragment.SendMoneyFragment;
+import com.itvillage.dev.offlinerocketapp.fragment.BalanceShowFragment;
+import com.itvillage.dev.offlinerocketapp.fragment.CashOutFragment;
+import com.itvillage.dev.offlinerocketapp.fragment.MobileRechargeFragment;
+import com.itvillage.dev.offlinerocketapp.fragment.PaymentFragment;
+import com.itvillage.dev.offlinerocketapp.fragment.SendMoneyFragment;
 
 public class FragmentShowActivity extends AppCompatActivity {
     private String getOptionName,simName,acNumber;

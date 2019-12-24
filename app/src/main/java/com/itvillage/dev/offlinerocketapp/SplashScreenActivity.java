@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap;
+package com.itvillage.dev.offlinerocketapp;
 
 import android.content.Context;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap.fragment;
+package com.itvillage.dev.offlinerocketapp.fragment;
 
 import android.Manifest.permission;
 import android.annotation.SuppressLint;
@@ -22,13 +22,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.InterstitialAd;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
-import com.itvillage.dev.offlinebkashap.FragmentShowActivity;
-import com.itvillage.dev.offlinebkashap.R;
+import com.itvillage.dev.offlinerocketapp.FragmentShowActivity;
+import com.itvillage.dev.offlinerocketapp.R;
+import com.itvillage.dev.sqlite.SQLiteDB;
 import com.romellfudi.permission.PermissionService;
-import com.romellfudi.ussdlibrary.SplashLoadingService;
 import com.romellfudi.ussdlibrary.USSDApi;
 import com.romellfudi.ussdlibrary.USSDController;
 
@@ -44,109 +43,107 @@ import static android.content.Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS;
  */
 
 @SuppressLint("ValidFragment")
-public class BalanceShowFragment extends Fragment {
+public class CashOutFragment extends Fragment {
 
 
-    private EditText passwordForBalance;
-    private ImageButton sendButtonForBalance;
-    private String pin;
+    private EditText getAmounts, getPin;
+    private ImageButton send;
+    private TextView acNo;
+    private String acNumber, amount, pin;
 
     private HashMap<String, HashSet<String>> map;
     private USSDApi ussdApi;
 
     private ArrayList<String> inputValue;
-
     private Context context;
     private int count = 0;
-    private InterstitialAd mInterstitialAd;
 
     private PermissionService.Callback callback = new PermissionService.Callback() {
         @Override
         public void onRefuse(ArrayList<String> RefusePermissions) {
-            Toast.makeText(getContext(), "Permission Deny", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "dinay", Toast.LENGTH_SHORT).show();
             getActivity().finish();
         }
 
         @Override
         public void onFinally() {
-            // pass
+
         }
     };
 
     @SuppressLint("ValidFragment")
-    public BalanceShowFragment(FragmentShowActivity fragmentShowActivity) {
+    public CashOutFragment(String acNumber, FragmentShowActivity fragmentShowActivity) {
+
+        this.acNumber = acNumber;
         this.context = fragmentShowActivity;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         map = new HashMap<>();
-        map.put("KEY_LOGIN",
-                new HashSet<>(Arrays.asList("espere", "waiting", "loading", "esperando")));
-        map.put("KEY_ERROR",
-                new HashSet<>(Arrays.asList("problema", "problem", "error", "null")));
+        map.put("KEY_LOGIN", new HashSet<>(Arrays.asList("espere", "waiting", "loading", "esperando")));
+        map.put("KEY_ERROR", new HashSet<>(Arrays.asList("problema", "problem", "error", "null")));
 
         new PermissionService(getActivity()).request(
+
                 new String[]{permission.CALL_PHONE, permission.READ_PHONE_STATE},
                 callback);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.balance_show_fragment, container, false);
+        View view = inflater.inflate(R.layout.cash_out_fragment, container, false);
 
-        passwordForBalance = view.findViewById(R.id.passwordForBalance);
-        sendButtonForBalance = view.findViewById(R.id.sendButtonForBalance);
-      /*  MobileAds.initialize(view.getContext(), "ca-app-pub-5203976193543346~5370168648");
-        // MobileAds.initialize(view.getContext(), "ca-app-pub-3940256099942544~3347511713");
+        getPin = view.findViewById(R.id.passwordCashOut);
+        getAmounts = view.findViewById(R.id.amountsCashOut);
 
-        // Interstitial Ads One
-        mInterstitialAd = new InterstitialAd(view.getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-5203976193543346/1430923638");
-        // mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());*/
+        send = view.findViewById(R.id.sendCashout);
 
+        acNo = view.findViewById(R.id.numberCashOut);
+        acNo.setText(acNumber);
         setHasOptionsMenu(false);
-
-        sendButtonForBalance.setOnClickListener(new View.OnClickListener() {
+        send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (passwordForBalance.getText().toString().equals("")) {
-                    passwordForBalance.setError("PIN is Required");
+                ArrayList<String> phone = new ArrayList<>();
+                phone.add(acNumber);
+                SQLiteDB.insert("cashout", phone);
+                if (getAmounts.getText().toString().equals("") && getPin.getText().toString().equals("")) {
+                    getAmounts.setError("Amount is Required");
+                    getPin.setError("PIN is Required");
                 } else {
-                    if (passwordForBalance.getText().toString().matches("\\d+")) {
+                    if (getAmounts.getText().toString().matches("\\d+") && getPin.getText().toString().matches("\\d+")) {
                         inputValue = new ArrayList<>();
-
-                        pin = passwordForBalance.getText().toString();
-                        inputValue.add("5");
+                        amount = getAmounts.getText().toString();
+                        pin = getPin.getText().toString();
+                        inputValue.add("7");
                         inputValue.add("1");
+                        inputValue.add(acNumber);
+                        inputValue.add(amount);
                         inputValue.add(pin);
                         closeKeyBoard();
-                        ShowBalance(0);
+                        Cashout(0);
                     } else {
-                        passwordForBalance.setError("Invalid PIN");
+                        getAmounts.setError("Invalid Amount");
+                        getPin.setError("Invalid PIN");
                     }
                 }
-
-
             }
         });
-
         return view;
     }
 
-
-    private void ShowBalance(int simslot) {
+    private void Cashout(int simslot) {
 
         ussdApi = USSDController.getInstance(getActivity(), simslot);
+        //if (USSDController.verifyOverLay(getActivity())) {
 
-        // if (USSDController.verifyOverLay(getActivity())) {
-
-            final Intent[] svc = {new Intent(getActivity(), SplashLoadingService.class)};
-        // getActivity().startService(svc[0]);
+        //  final Intent[] svc = {new Intent(getActivity(), SplashLoadingService.class)};
+        //  getActivity().startService(svc[0]);
             Log.d("APP", "START SPLASH DIALOG");
         String phoneNumber = "*322#";
 
@@ -154,9 +151,10 @@ public class BalanceShowFragment extends Fragment {
                 @Override
                 public void responseInvoke(String message) {
                               /*
-                              * Send Ussd Response
+                              Send Response in Ussd
                               * */
-                    if (count <= 1) {
+                    if (count <= 2) {
+
                         if (count == 0) {
                             ussdApi.send(inputValue.get(0), new USSDController.CallbackMessage() {
                                 @Override
@@ -165,41 +163,59 @@ public class BalanceShowFragment extends Fragment {
                                     ussdApi.send(inputValue.get(1), new USSDController.CallbackMessage() {
                                         @Override
                                         public void responseMessage(String message) {
-                                            getActivity().stopService(svc[0]);
+
+
                                         }
                                     });
+
                                 }
                             });
                         }
-
                         if (count == 1) {
                             ussdApi.send(inputValue.get(2), new USSDController.CallbackMessage() {
                                 @Override
                                 public void responseMessage(String message) {
+
                                     ++count;
-                                    getActivity().stopService(svc[0]);
-                                    Log.e("mgs1", String.valueOf(message));
+                                    ussdApi.send(inputValue.get(3), new USSDController.CallbackMessage() {
+                                        @Override
+                                        public void responseMessage(String message) {
+
+                                        }
+                                    });
+
                                 }
                             });
+                        }
+                        if (count == 2) {
+                            ussdApi.send(inputValue.get(4), new USSDController.CallbackMessage() {
+                                @Override
+                                public void responseMessage(String message) {
+                                    ++count;
+
+                                    // getActivity().stopService(svc[0]);
+                                }
+                            });
+
                         }
                     }
                 }
 
                 @Override
                 public void over(String message) {
+
                     Log.e("APP", message);
                     if (!String.valueOf(message).equals("Check your accessibility | overlay permission")) {
                         showDailog(String.valueOf(message));
-                        Log.e("mgs2", String.valueOf(message));
-                        getActivity().stopService(svc[0]);
+                        // getActivity().stopService(svc[0]);
                     } else {
-                        getActivity().stopService(svc[0]);
+                        // getActivity().stopService(svc[0]);
 
                     }
                 }
             });
         }
-    //  }
+    // }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -208,19 +224,20 @@ public class BalanceShowFragment extends Fragment {
     }
 
     public void showDailog(String mgs) {
-        if (mgs.equals(" ")) {
 
+        if (mgs.equals(" ")) {
             AlertDialog alertDialog = new AlertDialog.Builder(context).create();
             alertDialog.setTitle("Dear Customer,");
             alertDialog.setCancelable(false);
             alertDialog.setMessage("The bKash Account No is invalid");
             alertDialog.setIcon(R.drawable.logofinal);
+
             alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Retry", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-
                     feedBackDialog();
                 }
             });
+
             alertDialog.show();
         } else {
 
@@ -242,7 +259,6 @@ public class BalanceShowFragment extends Fragment {
                     android.os.Process.killProcess(pid);
                 }
             });
-
             alertDialog.show();
         }
 
@@ -300,10 +316,11 @@ public class BalanceShowFragment extends Fragment {
                 int pid = android.os.Process.myPid();
                 android.os.Process.killProcess(pid);
                 Toast.makeText(getContext(), "Thank You for this support", Toast.LENGTH_SHORT).show();
-               /* TODO: add rating code*/
+             /*
+             TODO: add rating code
+             */
             }
         });
-
         alertDialog.setView(view);
         alertDialog.show();
     }
@@ -317,27 +334,21 @@ public class BalanceShowFragment extends Fragment {
         ImageView sim0 = (ImageView) view.findViewById(R.id.sim0);
         ImageView sim1 = (ImageView) view.findViewById(R.id.sim1);
         TextView confirmationText = view.findViewById(R.id.details);
-        confirmationText.setVisibility(View.INVISIBLE);
+        double fee = Double.parseDouble(amount) * 0.0185;
+        double total = Double.parseDouble(amount) + fee;
+        confirmationText.setText("Confirm Please \n\nAC no: " + acNumber + "\nAmount: " + amount + " tk\nbKash Fee: " + fee + " tk\n\n Total Balance Need: " + total + " tk");
         sim0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                } else {
-                    Log.e("Ads", "not showing");
-                }
-                ShowBalance(0);
+
+                Cashout(0);
             }
         });
         sim1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                } else {
-                    Log.e("Ads", "not showing");
-                }
-                ShowBalance(1);
+
+                Cashout(1);
             }
         });
         ImageView close = (ImageView) view.findViewById(R.id.close);
@@ -352,14 +363,13 @@ public class BalanceShowFragment extends Fragment {
 
     }
 
-    public void selectSimSlotOne() {
-        ShowBalance(0);
-    }
-
     private void closeKeyBoard() {
         FragmentShowActivity fragmentShowActivity = (FragmentShowActivity) getActivity();
         fragmentShowActivity.closeKeyboard();
     }
 
+    public void selectSimSlotOne() {
+        Cashout(0);
+    }
 }
 

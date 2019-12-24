@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap;
+package com.itvillage.dev.offlinerocketapp;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.Activity;
@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.BatteryManager;
 import android.os.Build;
@@ -26,11 +25,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -352,7 +348,7 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    public void calculatorBottomSheetShow() {
+ /*   public void calculatorBottomSheetShow() {
         View view = getLayoutInflater().inflate(R.layout.bottom_sheet_calculator, null);
         final EditText amount = view.findViewById(R.id.editText2);
 
@@ -384,7 +380,7 @@ public class HomeActivity extends AppCompatActivity {
         bottomSheetDialog.setContentView(view);
         bottomSheetDialog.show();
 
-    }
+    }*/
 
     private void settingBottomSheetShow() {
         View view = getLayoutInflater().inflate(R.layout.setting_bottom_sheet, null);
@@ -407,9 +403,9 @@ public class HomeActivity extends AppCompatActivity {
         video_tutorial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW,
+          /*      Intent i = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("https://www.youtube.com/watch?v=iBrzJIa-_64&list=PLc9fjuvaiz3GJ2DYogiJqDwIwBTwOpAIr"));
-                startActivity(i);
+                startActivity(i);*/
             }
         });
         notification.setOnClickListener(new View.OnClickListener() {
@@ -421,15 +417,15 @@ public class HomeActivity extends AppCompatActivity {
         reatUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.itvillage.dev.offlinebkashap")));
+                //  startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.itvillage.dev.offlinebkashap")));
             }
         });
         Sugg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto", "itvillage029@gmail.com", null));
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Offline bkash App");
+                        "mailto", "tanvir35-209@diu.edu.bd", null));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Offline Rocket App");
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "Type your Valuable Suggestion:");
                 startActivity(Intent.createChooser(emailIntent, "Send Suggestion..."));
             }
@@ -444,8 +440,8 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto", "itvillage029@gmail.com", null));
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Offline bkash App");
+                        "mailto", "tanvir35-209@diu.edu.bd", null));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Offline Rocket App");
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "Type your report:");
                 startActivity(Intent.createChooser(emailIntent, "Send report..."));
             }
@@ -453,9 +449,9 @@ public class HomeActivity extends AppCompatActivity {
         privacy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW,
+             /*   Intent i = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("https://www.shorturl.at/hEIJS"));
-                startActivity(i);
+                startActivity(i);*/
             }
         });
 
@@ -466,7 +462,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void showGetStartVideoDemo() {
 
-        Typeface typeface = Typeface.createFromAsset(this.getAssets(), "fonts/siyam_rupali.ttf");
+ /*       Typeface typeface = Typeface.createFromAsset(this.getAssets(), "fonts/siyam_rupali.ttf");
         View view = getLayoutInflater().inflate(R.layout.dialog_show_getstart_video_demo, null);
         final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 
@@ -488,7 +484,7 @@ public class HomeActivity extends AppCompatActivity {
 
         alertDialog.setView(view);
         alertDialog.show();
-
+*/
     }
 
     @Override

@@ -1,7 +1,7 @@
-package com.itvillage.dev.offlinebkashap.adapter;
+package com.itvillage.dev.offlinerocketapp.adapter;
 
-import com.itvillage.dev.offlinebkashap.model.ContactEmail;
-import com.itvillage.dev.offlinebkashap.model.ContactPhone;
+import com.itvillage.dev.offlinerocketapp.model.ContactEmail;
+import com.itvillage.dev.offlinerocketapp.model.ContactPhone;
 
 import java.util.ArrayList;
 

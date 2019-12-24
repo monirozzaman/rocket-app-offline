@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context="com.itvillage.dev.offlinebkashap.SimOparetorSelectActivity">
+    tools:context="com.itvillage.dev.offlinerocketapp.SimOparetorSelectActivity">
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView2"

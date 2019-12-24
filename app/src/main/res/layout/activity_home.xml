@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context="com.itvillage.dev.offlinebkashap.HomeActivity">
+    tools:context="com.itvillage.dev.offlinerocketapp.HomeActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.itvillage.dev.offlinebkashap.ScannerActivity"
+    tools:context="com.itvillage.dev.offlinerocketapp.ScannerActivity"
     tools:showIn="@layout/activity_scanner">
 
     <!--  set custom layout for scanner-->

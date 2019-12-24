@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.itvillage.dev.offlinebkashap">
+    package="com.itvillage.dev.offlinerocketapp">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -37,10 +37,10 @@
         </service>
 
         <activity
-            android:name=".ScannerActivity"
+            android:name="com.itvillage.dev.offlinerocketapp.ScannerActivity"
             android:theme="@style/FullScreenAppTheme" />
         <activity
-            android:name=".HomeActivity"
+            android:name="com.itvillage.dev.offlinerocketapp.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/FullScreenAppTheme">
             <intent-filter>
@@ -50,11 +50,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashScreenHomeActivity"
+            android:name="com.itvillage.dev.offlinerocketapp.SplashScreenHomeActivity"
             android:theme="@style/FullScreenForIntroAppTheme" />
-        <activity android:name=".GetPhoneNumberActivity" />
-        <activity android:name=".FragmentShowActivity" />
-        <activity android:name=".SplashScreenActivity" />
+        <activity android:name="com.itvillage.dev.offlinerocketapp.GetPhoneNumberActivity" />
+        <activity android:name="com.itvillage.dev.offlinerocketapp.FragmentShowActivity" />
+        <activity android:name="com.itvillage.dev.offlinerocketapp.SplashScreenActivity" />
 
         <service
             android:name="com.romellfudi.ussdlibrary.OverlayShowingService"
@@ -62,19 +62,19 @@
         <service
             android:name="com.romellfudi.ussdlibrary.SplashLoadingService"
             android:exported="false" />
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name="com.itvillage.dev.offlinerocketapp.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name=".SimOparetorSelectActivity" />
+        <activity android:name="com.itvillage.dev.offlinerocketapp.SimOparetorSelectActivity" />
         <activity
-            android:name=".NotificationActivity"
+            android:name="com.itvillage.dev.offlinerocketapp.NotificationActivity"
             android:theme="@style/FullScreenAppTheme" />
-        <activity android:name=".AboutActivity" />
+        <activity android:name="com.itvillage.dev.offlinerocketapp.AboutActivity" />
         <activity
-            android:name=".PermissionActivity"
+            android:name="com.itvillage.dev.offlinerocketapp.PermissionActivity"
             android:theme="@style/FullScreenForIntroAppTheme"></activity>
     </application>
 

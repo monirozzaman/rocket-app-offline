@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap.model;
+package com.itvillage.dev.offlinerocketapp.model;
 
 /**
  * Created by monirozzamanroni on 7/18/2019.

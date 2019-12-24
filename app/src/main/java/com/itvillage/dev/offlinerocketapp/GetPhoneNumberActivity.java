@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap;
+package com.itvillage.dev.offlinerocketapp;
 
 import android.Manifest;
 import android.app.ActionBar;
@@ -29,9 +29,9 @@ import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.itvillage.dev.offlinebkashap.adapter.Contact;
-import com.itvillage.dev.offlinebkashap.adapter.ContactFetcher;
-import com.itvillage.dev.offlinebkashap.adapter.ContactsAdapter;
+import com.itvillage.dev.offlinerocketapp.adapter.Contact;
+import com.itvillage.dev.offlinerocketapp.adapter.ContactFetcher;
+import com.itvillage.dev.offlinerocketapp.adapter.ContactsAdapter;
 import com.itvillage.dev.sqlite.SQLiteDB;
 
 import java.util.ArrayList;

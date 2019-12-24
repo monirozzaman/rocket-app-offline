@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap.adapter;
+package com.itvillage.dev.offlinerocketapp.adapter;
 
 import android.content.Context;
 import android.database.Cursor;

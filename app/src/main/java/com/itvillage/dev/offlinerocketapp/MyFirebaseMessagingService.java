@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap;
+package com.itvillage.dev.offlinerocketapp;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;

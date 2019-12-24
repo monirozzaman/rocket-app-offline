@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap.model;
+package com.itvillage.dev.offlinerocketapp.model;
 
 public class ContactEmail {
     public String address;

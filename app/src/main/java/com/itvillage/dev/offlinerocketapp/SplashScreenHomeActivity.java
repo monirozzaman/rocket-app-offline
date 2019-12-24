@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap;
+package com.itvillage.dev.offlinerocketapp;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,8 +19,8 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import com.itvillage.dev.offlinebkashap.adapter.IntroViewPagerAdaptor;
-import com.itvillage.dev.offlinebkashap.model.ScreenItems;
+import com.itvillage.dev.offlinerocketapp.adapter.IntroViewPagerAdaptor;
+import com.itvillage.dev.offlinerocketapp.model.ScreenItems;
 
 import java.util.ArrayList;
 import java.util.List;

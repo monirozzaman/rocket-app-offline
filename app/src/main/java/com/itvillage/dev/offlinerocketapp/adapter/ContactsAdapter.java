@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap.adapter;
+package com.itvillage.dev.offlinerocketapp.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.itvillage.dev.offlinebkashap.R;
+import com.itvillage.dev.offlinerocketapp.R;
 
 import java.util.ArrayList;
 

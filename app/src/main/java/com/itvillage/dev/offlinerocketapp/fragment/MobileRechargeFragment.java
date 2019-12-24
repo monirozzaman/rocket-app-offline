@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap.fragment;
+package com.itvillage.dev.offlinerocketapp.fragment;
 
 import android.Manifest.permission;
 import android.annotation.SuppressLint;
@@ -24,8 +24,8 @@ import android.widget.Toast;
 
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
-import com.itvillage.dev.offlinebkashap.FragmentShowActivity;
-import com.itvillage.dev.offlinebkashap.R;
+import com.itvillage.dev.offlinerocketapp.FragmentShowActivity;
+import com.itvillage.dev.offlinerocketapp.R;
 import com.itvillage.dev.sqlite.SQLiteDB;
 import com.romellfudi.permission.PermissionService;
 import com.romellfudi.ussdlibrary.USSDApi;
@@ -38,42 +38,38 @@ import java.util.HashSet;
 
 import static android.content.Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS;
 
-/**
- * Created by monirozzamanroni on 7/14/2019.
- */
 
 @SuppressLint("ValidFragment")
-public class SendMoneyFragment extends Fragment {
-
+public class MobileRechargeFragment extends Fragment {
 
     private EditText getAmounts, getPin;
     private ImageButton send;
     private TextView acNo;
-    private String acNumber, amount, pin;
+    private String acNumber, amount, pin, simType;
 
     private HashMap<String, HashSet<String>> map;
     private USSDApi ussdApi;
-    private ArrayList<String> inputValue;
 
+    private ArrayList<String> inputValue;
     private Context context;
     private int count = 0;
+    private ImageView simIcon;
     private PermissionService.Callback callback = new PermissionService.Callback() {
-
         @Override
         public void onRefuse(ArrayList<String> RefusePermissions) {
             Toast.makeText(getContext(), "dinay", Toast.LENGTH_SHORT).show();
             getActivity().finish();
         }
-
         @Override
         public void onFinally() {
-            // pass
+
         }
     };
 
     @SuppressLint("ValidFragment")
-    public SendMoneyFragment(String acNumber, FragmentShowActivity fragmentShowActivity) {
+    public MobileRechargeFragment(String acNumber, String simName, FragmentShowActivity fragmentShowActivity) {
         this.acNumber = acNumber;
+        this.simType = simName;
         this.context = fragmentShowActivity;
     }
 
@@ -92,53 +88,81 @@ public class SendMoneyFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.sim_recharge_freagment, container, false);
 
-        View view = inflater.inflate(R.layout.content_op1, container, false);
+        simIcon = view.findViewById(R.id.simIconSimRecharge);
 
-        getAmounts = view.findViewById(R.id.amountsSendMoney);
-        getPin = view.findViewById(R.id.passwordSendMoney);
-        send = view.findViewById(R.id.sendSendMoney);
-        acNo = view.findViewById(R.id.numberSendMoney);
+        getAmounts = view.findViewById(R.id.amountSimRecharge);
+        getPin = view.findViewById(R.id.passwordSimRecharge);
 
+        //Button
+        send = view.findViewById(R.id.sandSimRecharge);
+
+        //Text View
+        acNo = view.findViewById(R.id.numberSimRecharge);
         acNo.setText(acNumber);
         setHasOptionsMenu(false);
+
+        if (simType.equals("1")) {
+            simIcon.setBackgroundResource(R.drawable.robi);
+        } else if (simType.equals("2")) {
+            simIcon.setBackgroundResource(R.drawable.airtel);
+        } else if (simType.equals("3")) {
+            simIcon.setBackgroundResource(R.drawable.banglalink);
+        } else if (simType.equals("4")) {
+            simIcon.setBackgroundResource(R.drawable.gp);
+        } else if (simType.equals("5")) {
+            simIcon.setBackgroundResource(R.drawable.teletalk);
+        }
+
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (getAmounts.getText().toString().equals("") && getPin.getText().toString().equals("")) {
-                    getAmounts.setError("Amount is Required");
 
+                if (getAmounts.getText().toString().equals("")  && getPin.getText().toString().equals("")) {
+                    getAmounts.setError("Amount is Required");
                     getPin.setError("PIN is Required");
-                } else {
+                }
+                else {
                     if (getAmounts.getText().toString().matches("\\d+") && getPin.getText().toString().matches("\\d+")) {
+
                         inputValue = new ArrayList<>();
                         amount = getAmounts.getText().toString();
 
                         pin = getPin.getText().toString();
+                        inputValue.add("3");
+                        inputValue.add("1");
                         inputValue.add("2");
                         inputValue.add(acNumber);
+                        inputValue.add(simType);
                         inputValue.add(amount);
                         inputValue.add(pin);
+
                         closeKeyBoard();
-                        SendMoney(0);
+                        MobileRecharge(0);
+
                     } else {
                         getAmounts.setError("Invalid Amount");
                         getPin.setError("Invalid PIN");
                     }
                 }
+
+
             }
         });
         return view;
     }
 
-    private void SendMoney(int simslot) {
+    private void MobileRecharge(int simslot) {
         ArrayList<String> phone = new ArrayList<>();
         phone.add(acNumber);
         SQLiteDB.insert("cashout", phone);
         ussdApi = USSDController.getInstance(getActivity(), simslot);
-        //  if (USSDController.verifyOverLay(getActivity())) {
 
+        //  if (USSDController.verifyOverLay(getActivity())) {
+        //final Intent[] svc = {new Intent(getActivity(), SplashLoadingService.class)};
+        //getActivity().startService(svc[0]);
             Log.d("APP", "START SPLASH DIALOG");
         String phoneNumber = "*322#";
 
@@ -146,7 +170,7 @@ public class SendMoneyFragment extends Fragment {
                 @Override
                 public void responseInvoke(String message) {
                               /*  Feed Back Mag*/
-                    if (count <= 1) {
+                    if (count <= 3) {
                         if (count == 0) {
                             ussdApi.send(inputValue.get(0), new USSDController.CallbackMessage() {
                                 @Override
@@ -155,9 +179,9 @@ public class SendMoneyFragment extends Fragment {
                                     ussdApi.send(inputValue.get(1), new USSDController.CallbackMessage() {
                                         @Override
                                         public void responseMessage(String message) {
-
                                         }
                                     });
+
                                 }
                             });
                         }
@@ -171,10 +195,32 @@ public class SendMoneyFragment extends Fragment {
                                         public void responseMessage(String message) {
                                         }
                                     });
+
                                 }
                             });
                         }
+                        if (count == 2) {
+                            ussdApi.send(inputValue.get(4), new USSDController.CallbackMessage() {
+                                @Override
+                                public void responseMessage(String message) {
+                                    ++count;
+                                    ussdApi.send(inputValue.get(5), new USSDController.CallbackMessage() {
+                                        @Override
+                                        public void responseMessage(String message) {
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                        if (count == 3) {
+                            ussdApi.send(inputValue.get(6), new USSDController.CallbackMessage() {
+                                @Override
+                                public void responseMessage(String message) {
+                                    ++count;
 
+                                }
+                            });
+                        }
                     }
                 }
 
@@ -183,9 +229,9 @@ public class SendMoneyFragment extends Fragment {
                     Log.e("APP", message);
                     if (!String.valueOf(message).equals("Check your accessibility | overlay permission")) {
                         showDailog(String.valueOf(message));
-
+                        // getActivity().stopService(svc[0]);
                     } else {
-
+                        //  getActivity().stopService(svc[0]);
                     }
                 }
             });
@@ -203,23 +249,21 @@ public class SendMoneyFragment extends Fragment {
 
         if (mgs.equals(" ")) {
             AlertDialog alertDialog = new AlertDialog.Builder(context).create();
-
-            alertDialog.setTitle("Dear Sir,");
+            alertDialog.setTitle("Dear Customer,");
             alertDialog.setCancelable(false);
             alertDialog.setMessage("The bKash Account No is invalid");
             alertDialog.setIcon(R.drawable.logofinal);
-
             alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Retry", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     feedBackDialog();
+
                 }
             });
             alertDialog.show();
         } else {
 
             AlertDialog alertDialog = new AlertDialog.Builder(context).create();
-
-            alertDialog.setTitle("Dear Customer,");
+            alertDialog.setTitle("Dear Sir,");
             alertDialog.setCancelable(false);
             alertDialog.setMessage(mgs);
             alertDialog.setIcon(R.drawable.logofinal);
@@ -282,9 +326,11 @@ public class SendMoneyFragment extends Fragment {
                 }
             }
         });
+
         smileRating.setOnRatingSelectedListener(new SmileRating.OnRatingSelectedListener() {
             @Override
             public void onRatingSelected(int level, boolean reselected) {
+
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addCategory(Intent.CATEGORY_HOME);
                 intent.addFlags(FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
@@ -292,12 +338,12 @@ public class SendMoneyFragment extends Fragment {
                 ActivityCompat.finishAffinity((Activity) context);
                 int pid = android.os.Process.myPid();
                 android.os.Process.killProcess(pid);
-
                 Toast.makeText(getContext(), "Thank You for this support", Toast.LENGTH_SHORT).show();
-             /*          TODO: add rating code              */
+          /*
+           TODO: add rating code
+           */
             }
         });
-
         alertDialog.setView(view);
         alertDialog.show();
     }
@@ -311,26 +357,20 @@ public class SendMoneyFragment extends Fragment {
         ImageView sim0 = (ImageView) view.findViewById(R.id.sim0);
         ImageView sim1 = (ImageView) view.findViewById(R.id.sim1);
         TextView confirmationText = view.findViewById(R.id.details);
-
-        double fee = 5.00;
-        double total = Double.parseDouble(amount) + fee;
-        confirmationText.setText("Confirm Please \n\nAC no: " + acNumber + "\nAmount: " + amount + " tk\nbKash Fee: " + fee + " tk\n\n Total Balance Need: " + total + " tk");
+        confirmationText.setVisibility(View.INVISIBLE);
 
         sim0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                SendMoney(0);
+                MobileRecharge(0);
             }
         });
         sim1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                SendMoney(1);
+                MobileRecharge(1);
             }
         });
-
         ImageView close = (ImageView) view.findViewById(R.id.close);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -343,12 +383,14 @@ public class SendMoneyFragment extends Fragment {
     }
 
     private void closeKeyBoard() {
+
         FragmentShowActivity fragmentShowActivity = (FragmentShowActivity) getActivity();
         fragmentShowActivity.closeKeyboard();
+
     }
 
     public void selectSimSlotOne() {
-        SendMoney(0);
+        MobileRecharge(0);
     }
 }
 

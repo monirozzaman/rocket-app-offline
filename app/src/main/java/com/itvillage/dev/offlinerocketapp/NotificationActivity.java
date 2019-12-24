@@ -1,4 +1,4 @@
-package com.itvillage.dev.offlinebkashap;
+package com.itvillage.dev.offlinerocketapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
